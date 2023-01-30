@@ -15,8 +15,6 @@ const UserInfo = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { username } = useAppSelector(curUserDataSelector);
-  const curUser = useAppSelector(curUserDataSelector);
-  console.log(curUser);
   const logOut = () => {
     navigate("/");
     dispatch(setCurUserData(""));

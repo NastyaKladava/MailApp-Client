@@ -9,7 +9,7 @@ const DropMenu = ({ users }) => {
   const dispatch = useAppDispatch();
   const curMailRecipient = useAppSelector(curMailRecipSelector);
 
-  const setRecipient = (newInputValue) => {
+  const setRecipient = (e, newInputValue) => {
     dispatch(setCurMailRecipient(newInputValue));
   };
 
@@ -28,6 +28,7 @@ const DropMenu = ({ users }) => {
       options={users.map((user) => user.username)}
       renderInput={(params) => <TextField {...params} label="Recipient" />}
       onInputChange={setRecipient}
+      onChange={setRecipient}
     />
   );
 };

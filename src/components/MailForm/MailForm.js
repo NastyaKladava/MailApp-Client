@@ -72,6 +72,7 @@ const MailForm = () => {
       >
         <DropMenu users={users} />
         <TextField
+          value={curMailSubj}
           margin="normal"
           fullWidth
           name="subject"
@@ -80,11 +81,11 @@ const MailForm = () => {
           id="subject"
           autoComplete="subject"
           onChange={(e) => {
-            setId();
             dispatch(setCurMailSubj(e.target.value));
           }}
         />
         <TextField
+          value={curMailBody}
           margin="normal"
           id="mailText"
           label="Email"
@@ -92,7 +93,10 @@ const MailForm = () => {
           placeholder="Print your mail here..."
           multiline
           sx={{ mb: 3 }}
-          onChange={(e) => dispatch(setCurMailBody(e.target.value))}
+          onChange={(e) => {
+            setId();
+            dispatch(setCurMailBody(e.target.value));
+          }}
         />
         <Button
           type="submit"
