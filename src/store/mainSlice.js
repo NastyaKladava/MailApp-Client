@@ -74,7 +74,7 @@ const mainSlice = createSlice({
       })
       .addCase(registerUser.fulfilled, (state, action) => {
         state.curentUserData = action.payload;
-        state.users.push(action.payload);
+        // state.users.push(action.payload);
       })
       .addCase(getMails.fulfilled, (state, action) => {
         state.mails = action.payload;
