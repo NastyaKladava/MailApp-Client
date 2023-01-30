@@ -72,7 +72,6 @@ const MailForm = () => {
       >
         <DropMenu users={users} />
         <TextField
-          value={curMailSubj}
           margin="normal"
           fullWidth
           name="subject"
@@ -86,7 +85,6 @@ const MailForm = () => {
           }}
         />
         <TextField
-          value={curMailBody}
           margin="normal"
           id="mailText"
           label="Email"
