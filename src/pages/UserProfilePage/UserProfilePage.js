@@ -15,7 +15,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     dispatch(getUsers());
-  }, [dispatch, id]);
+  }, []);
 
   useEffect(() => {
     dispatch(getMails(id));
